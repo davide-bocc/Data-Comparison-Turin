@@ -2,7 +2,7 @@
 
 > A data-driven exploration of Turin's shift from an industrial city to a sustainable, tech-oriented metropolitan area.
 
-![Torino Full-scale comparison](docs/Figure_1.png)
+![Torino Full-scale comparison](https://raw.githubusercontent.com/davide-bocc/Data-Comparison-Turin/main/docs/Figure_1.png)
 
 ---
 
@@ -25,7 +25,7 @@ The central question: **Is Turin leaving its FIAT-era identity behind and reinve
 
 The main visualization is a **multi-axis time series chart** that plots all four indicators on a shared timeline, each on its own scale, making trends and correlations immediately visible.
 
-![Torino Full-scale comparison](docs/Figure_1.png)
+![Torino Full-scale comparison](https://raw.githubusercontent.com/davide-bocc/Data-Comparison-Turin/main/docs/Figure_1.png)
 
 **Key findings:**
 
