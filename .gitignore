@@ -1,3 +1,7 @@
 .idea/
 __pycache__/
 *.pyc
+
+# Generated output (keep folder, ignore contents)
+output/*
+!output/.gitkeep

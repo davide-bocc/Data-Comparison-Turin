@@ -1,17 +1,23 @@
+import os
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_singolo(serie, titolo, ylabel, colore='steelblue'):
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'output')
+
+
+def plot_singolo(serie, titolo, ylabel, colore='steelblue', save_as=None):
     plt.figure(figsize=(10, 5))
     plt.plot(serie.index, serie.values, '-o', markersize=3, color=colore)
     plt.title(titolo)
     plt.xlabel('Anno')
     plt.ylabel(ylabel)
     plt.tight_layout()
+    if save_as:
+        plt.savefig(os.path.join(OUTPUT_DIR, save_as), dpi=150)
     plt.show()
 
 
-def plot_normalizzato(serie_dict):
+def plot_normalizzato(serie_dict, save_as=None):
     nomi = list(serie_dict.keys())
     serie_list = list(serie_dict.values())
 
@@ -60,4 +66,6 @@ def plot_normalizzato(serie_dict):
 
     fig.tight_layout()
     fig.subplots_adjust(left=0.2)
+    if save_as:
+        fig.savefig(os.path.join(OUTPUT_DIR, save_as), dpi=150)
     plt.show()
