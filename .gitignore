@@ -1,3 +1,39 @@
+# IDE
 .idea/
+.vscode/
+*.code-workspace
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local config
+.env
+*.local
+.env.*
+
+# Temporary files
+~$*
+~*
+*.tmp
+*.bak
+*.swp
+
+# Log files
+*.log
