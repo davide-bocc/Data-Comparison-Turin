@@ -121,7 +121,7 @@ pip install pandas matplotlib openpyxl numpy
 ## 📁 Data Sources
 
 - [ISTAT – Indicatori territoriali per le politiche di sviluppo](https://www.istat.it)
-- [OpenData Torino – Piste ciclabili](https://www.comune.torino.it/aperto)
+- [OpenData Torino – Piste ciclabili](https://esploradati.istat.it/databrowser/#/)
 - [ISTAT – Registro Statistico delle Imprese Attive (ASIA)](https://www.istat.it)
 
 > ⚠️ **Note:** The original dataset filenames have been renamed for clarity and consistency.
