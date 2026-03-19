@@ -5,6 +5,13 @@
 
 # Python
 __pycache__/
+
+*.pyc
+
+# Generated output (keep folder, ignore contents)
+output/*
+!output/.gitkeep
+
 *.py[cod]
 *$py.class
 *.so
@@ -37,3 +44,4 @@ env/
 
 # Log files
 *.log
+

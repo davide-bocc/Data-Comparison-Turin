@@ -1,8 +1,8 @@
-from data.Retribuzione import get_remuneration
-from data.Popolazione import get_population
+from data.Remuneration import get_remuneration
+from data.Population import get_population
 from data.ATECO import get_ict_companies
-from data.Ciclabili import get_bike_lanes
-from grafici import plot_singolo, plot_normalizzato
+from data.BikeLanes import get_bike_lanes
+from charts import plot_singolo, plot_normalizzato
 
 remuneration = get_remuneration()
 population = get_population()

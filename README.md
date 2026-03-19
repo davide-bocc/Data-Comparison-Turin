@@ -39,23 +39,25 @@ The main visualization is a **multi-axis time series chart** that plots all four
 ## 🗂️ Project Structure
 
 ```
-Comparazione Dati/
+Data-Comparison-Turin/
 │
 ├── main.py                  # Entry point — loads data, computes common years, renders chart
 │
 ├── data/
-│   ├── Popolazione.py       # Population data loader
-│   ├── Retribuzione.py      # Salary data loader
+│   ├── Population.py        # Population data loader
+│   ├── Remuneration.py      # Salary data loader
 │   ├── ATECO.py             # ICT companies data loader
-│   └── Ciclabili.py         # Bike lane data loader
+│   └── BikeLanes.py         # Bike lane data loader
 │
-├── grafici.py               # Plotting functions (single series + multi-axis normalized)
+├── charts.py                # Plotting functions (single series + multi-axis normalized)
 │
 ├── file/                    # Raw data files (Excel / CSV)
 │   ├── Popolazione_residenti.xlsx
 │   ├── Retribuzione.xlsx
 │   ├── ATECO_J.csv
 │   └── Piste_ciclabili.xlsx
+│
+├── output/                  # Generated charts (gitignored)
 │
 └── docs/
     └── Figure_1.png         # Exported chart
