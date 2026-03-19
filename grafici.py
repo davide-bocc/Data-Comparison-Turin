@@ -47,7 +47,7 @@ def plot_normalizzato(serie_dict):
         ax.tick_params(axis='y', labelcolor=colore)
         linee.append(l)
 
-    ax1.set_xlabel('Anno')
+    ax1.set_xlabel('Year')
     ax1.set_title('Torino – Full-scale comparison')
 
     etichette = [l.get_label() for l in linee]

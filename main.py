@@ -1,19 +1,20 @@
-from data.Retribuzione import get_retribuzione
-from data.Popolazione import get_popolazione
-from data.ATECO import get_imprese_ict
-from data.Ciclabili import get_piste_ciclabili
+from data.Retribuzione import get_remuneration
+from data.Popolazione import get_population
+from data.ATECO import get_ict_companies
+from data.Ciclabili import get_bike_lanes
 from grafici import plot_singolo, plot_normalizzato
 
-ret = get_retribuzione()
-pop = get_popolazione()
-ict = get_imprese_ict()
-bike = get_piste_ciclabili()
+remuneration = get_remuneration()
+population = get_population()
+ict_companies = get_ict_companies()
+bike_lanes = get_bike_lanes()
 
-anni_comuni = sorted(set(ret.index) & set(pop.index) & set(ict.index) & set(bike.index))
+shared_years = sorted(set(remuneration.index) & set(population.index)
+                      & set(ict_companies.index) & set(bike_lanes.index))
 
 plot_normalizzato({
-    'Population':  pop.loc[anni_comuni],
-    'Remuneration': ret.loc[anni_comuni],
-    'ICT companies':  ict.loc[anni_comuni],
-    'Bike lanes': bike.loc[anni_comuni]
+    'Population':    population.loc[shared_years],
+    'Remuneration':  remuneration.loc[shared_years],
+    'ICT companies': ict_companies.loc[shared_years],
+    'Bike lanes':    bike_lanes.loc[shared_years]
 })
