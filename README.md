@@ -41,7 +41,7 @@ The main visualization is a **multi-axis time series chart** that plots all four
 ```
 Data-Comparison-Turin/
 │
-├── main.py                  # Entry point — loads data, computes common years, renders chart
+├── main.py                  # Entry point — loads data, builds database, renders chart
 │
 ├── data/
 │   ├── Population.py        # Population data loader
@@ -49,7 +49,11 @@ Data-Comparison-Turin/
 │   ├── ATECO.py             # ICT companies data loader
 │   └── BikeLanes.py         # Bike lane data loader
 │
-├── charts.py                # Plotting functions (single series + multi-axis normalized)
+├── sql/
+│   ├── database.py          # Creates SQLite DB and loads all four datasets
+│   └── queries.py           # SQL analysis functions (JOIN, WHERE, GROUP BY, HAVING, NOT IN)
+│
+├── charts.py                # Plotting functions (multi-axis normalized)
 │
 ├── file/                    # Raw data files (Excel / CSV)
 │   ├── Popolazione_residenti.xlsx
@@ -57,13 +61,18 @@ Data-Comparison-Turin/
 │   ├── ATECO_J.csv
 │   └── Piste_ciclabili.xlsx
 │
-├── output/                  # Generated charts (gitignored)
+├── output/                  # Generated charts and database (gitignored)
+│   └── torino_data.db       # SQLite database (auto-generated on run)
 │
 └── docs/
     └── Figure_1.png         # Exported chart
 ```
 
 ---
+
+## 🗄️ Database
+When main.py runs, all four datasets are automatically loaded into a local SQLite database (output/torino_data.db). Each indicator is stored as a separate table with year and value columns, enabling SQL-based analysis alongside the pandas pipeline.
+SQL queries are available in sql/queries.py and cover cross-table joins, filtering, aggregation by decade, and gap detection across datasets.
 
 ## ⚙️ Installation
 

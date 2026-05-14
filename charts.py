@@ -9,7 +9,7 @@ def plot_singolo(serie, titolo, ylabel, colore='steelblue', save_as=None):
     plt.figure(figsize=(10, 5))
     plt.plot(serie.index, serie.values, '-o', markersize=3, color=colore)
     plt.title(titolo)
-    plt.xlabel('Anno')
+    plt.xlabel('Years')
     plt.ylabel(ylabel)
     plt.tight_layout()
     if save_as:

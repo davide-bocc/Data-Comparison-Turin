@@ -2,12 +2,15 @@ from data.Remuneration import get_remuneration
 from data.Population import get_population
 from data.ATECO import get_ict_companies
 from data.BikeLanes import get_bike_lanes
-from charts import plot_singolo, plot_normalizzato
+from charts import plot_normalizzato
+from sql.database import build_database
 
 remuneration = get_remuneration()
 population = get_population()
 ict_companies = get_ict_companies()
 bike_lanes = get_bike_lanes()
+
+build_database(population, remuneration, ict_companies, bike_lanes)
 
 shared_years = sorted(set(remuneration.index) & set(population.index)
                       & set(ict_companies.index) & set(bike_lanes.index))
